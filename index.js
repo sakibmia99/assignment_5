@@ -122,9 +122,10 @@ callBtn.forEach(callBtn => {
 
       alert(`কল করা হলো ${service} (${number})`);
 
-      let li = document.createElement("li");
-      li.textContent = `${service}  ${number}`;
-      history.appendChild(li);
+      const h1 = document.createElement("h1");
+      h1.innerText = `${service}  ${number}`;
+      h1.className = "text-xl font-bold";
+      history.appendChild(h1);
     } else {
       alert("কয়েন শেষ");
     }
