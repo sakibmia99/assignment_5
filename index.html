@@ -26,7 +26,7 @@
                 </div>
                 <div
                     class="w-[106px] h-[52px] bg-[#41FF6B1A] flex justify-center items-center rounded-[50px] gap-3 font-bold text-[18px]">
-                    <h1>100</h1>
+                    <h1><span id="coin">100</span></h1>
                     <img src="./assets/coin.png" class="w-[30px] h-[30px]" alt="">
                 </div>
                 <div
@@ -54,7 +54,7 @@
                 </div>
                 <h1 class="text-[23px] font-bold mt-3">জাতীয় জরুরি সেবা</h1>
                 <h2 class="text-gray-500 font-semibold">National Emergency</h2>
-                <h1 class="text-[25px] font-bold mt-4">999</h1>
+                <h1 id="number1" class="text-[25px] font-bold mt-4">999</h1>
                 <div
                     class="w-[103px] min-h-[37px] bg-[#41FF6B1A] rounded-xl flex justify-center items-center text-gray-500">
                     <h1>সার্বজনীন</h1>
@@ -63,7 +63,8 @@
                     <button id="copy-btn1"
                         class=" hover:cursor-pointer hover:bg-gray-200 w-[182px] h-[40px] border-2 border-gray-300 rounded-xl text-gray-600 font-semibold text-lg"><i
                             class="fa-solid fa-copy"></i> Copy</button>
-                    <button class="w-[182px] h-[40px] bg-[#00A63E] rounded-xl text-white font-semibold text-lg"><i
+                    <button data-service="জাতীয় জরুরি সেবা" data-number="999"
+                        class="hover:cursor-pointer hover:bg-gray-500 callBtn w-[182px] h-[40px] bg-[#00A63E] rounded-xl text-white font-semibold text-lg"><i
                             class="fa-solid fa-phone"></i> Call</button>
                 </div>
             </div>
@@ -75,7 +76,7 @@
                 </div>
                 <h1 class="text-[23px] font-bold mt-3">পুলিশ</h1>
                 <h2 class="text-gray-500 font-semibold">Police</h2>
-                <h1 class="text-[25px] font-bold mt-4">999</h1>
+                <h1 id="number2" class="text-[25px] font-bold mt-4">999</h1>
                 <div
                     class="w-[103px] min-h-[37px] bg-[#41FF6B1A] rounded-xl flex justify-center items-center text-gray-500">
                     <h1>পুলিশ</h1>
@@ -84,7 +85,8 @@
                     <button id="copy-btn2"
                         class="hover:cursor-pointer hover:bg-gray-200 w-[182px] h-[40px] border-2 border-gray-300 rounded-xl text-gray-600 font-semibold text-lg"><i
                             class="fa-solid fa-copy"></i> Copy</button>
-                    <button class="w-[182px] h-[40px] bg-[#00A63E] rounded-xl text-white font-semibold text-lg"><i
+                    <button data-service="পুলিশ" data-number="999"
+                        class="hover:cursor-pointer hover:bg-gray-500 callBtn w-[182px] h-[40px] bg-[#00A63E] rounded-xl text-white font-semibold text-lg"><i
                             class="fa-solid fa-phone"></i> Call</button>
                 </div>
             </div>
@@ -96,7 +98,7 @@
                 </div>
                 <h1 class="text-[23px] font-bold mt-3">ফায়ার সার্ভিস</h1>
                 <h2 class="text-gray-500 font-semibold">Fire Service</h2>
-                <h1 class="text-[25px] font-bold mt-4">999</h1>
+                <h1 id="number3" class="text-[25px] font-bold mt-4">999</h1>
                 <div
                     class="w-[103px] min-h-[37px] bg-[#41FF6B1A] rounded-xl flex justify-center items-center text-gray-500">
                     <h1>ফায়ার</h1>
@@ -105,7 +107,9 @@
                     <button id="copy-btn3"
                         class="hover:cursor-pointer hover:bg-gray-200 w-[182px] h-[40px] border-2 border-gray-300 rounded-xl text-gray-600 font-semibold text-lg"><i
                             class="fa-solid fa-copy"></i> Copy</button>
-                    <button class="w-[182px] h-[40px] bg-[#00A63E] rounded-xl text-white font-semibold text-lg"><i
+                    <button data-service="ফায়ার সার্ভিস
+" data-number="999
+" class="hover:cursor-pointer hover:bg-gray-500 callBtn w-[182px] h-[40px] bg-[#00A63E] rounded-xl text-white font-semibold text-lg"><i
                             class="fa-solid fa-phone"></i> Call</button>
                 </div>
             </div>
@@ -113,7 +117,10 @@
                 <div class="flex justify-between items-center">
                     <h1 class="font-semibold text-[20px]"><i class="fa-solid fa-clock-rotate-left"></i> Call History
                     </h1>
-                    <button class="w-[112px] h-[52px] bg-[#00A63E] rounded-xl text-white font-bold">Clear</button>
+
+                    <ul id="history"></ul>
+                    <button id="clearBtn"
+                        class="hover:cursor-pointer hover:bg-gray-500 w-[112px] h-[52px] bg-[#00A63E] rounded-xl text-white font-bold">Clear</button>
                 </div>
 
 
@@ -126,7 +133,7 @@
                 </div>
                 <h1 class="text-[23px] font-bold mt-3">অ্যাম্বুলেন্স</h1>
                 <h2 class="text-gray-500 font-semibold">Ambulance</h2>
-                <h1 class="text-[25px] font-bold mt-4">1994-999999</h1>
+                <h1 id="number4" class="text-[25px] font-bold mt-4">1994-999999</h1>
                 <div
                     class="w-[103px] min-h-[37px] bg-[#41FF6B1A] rounded-xl flex justify-center items-center text-gray-500">
                     <h1>স্বাস্থ্য</h1>
@@ -135,8 +142,9 @@
                     <button id="copy-btn4"
                         class="hover:cursor-pointer hover:bg-gray-200 w-[182px] h-[40px] border-2 border-gray-300 rounded-xl text-gray-600 font-semibold text-lg"><i
                             class="fa-solid fa-copy"></i> Copy</button>
-                    <button class="w-[182px] h-[40px] bg-[#00A63E] rounded-xl text-white font-semibold text-lg"><i
-                            class="fa-solid fa-phone"></i> Call</button>
+                    <button data-service="অ্যাম্বুলেন্স" data-number="1994-999999
+" class="hover:cursor-pointer hover:bg-gray-500 callBtn w-[182px] h-[40px] bg-[#00A63E] rounded-xl text-white font-semibold text-lg"><i class="fa-solid fa-phone"></i>
+                        Call</button>
                 </div>
             </div>
             <div class="p-5 shadow-2xl rounded-xl">
@@ -147,7 +155,7 @@
                 </div>
                 <h1 class="text-[23px] font-bold mt-3">নারী ও শিশু সহায়তা</h1>
                 <h2 class="text-gray-500 font-semibold">Women & Child Helpline</h2>
-                <h1 class="text-[25px] font-bold mt-4">109</h1>
+                <h1 id="number5" class="text-[25px] font-bold mt-4">109</h1>
                 <div
                     class="w-[103px] min-h-[37px] bg-[#41FF6B1A] rounded-xl flex justify-center items-center text-gray-500">
                     <h1>সহায়তা</h1>
@@ -156,7 +164,8 @@
                     <button id="copy-btn5"
                         class="hover:cursor-pointer hover:bg-gray-200 w-[182px] h-[40px] border-2 border-gray-300 rounded-xl text-gray-600 font-semibold text-lg"><i
                             class="fa-solid fa-copy"></i> Copy</button>
-                    <button class="w-[182px] h-[40px] bg-[#00A63E] rounded-xl text-white font-semibold text-lg"><i
+                    <button data-service="নারী ও শিশু সহায়তা
+" data-number="109" class="hover:cursor-pointer hover:bg-gray-500 callBtn w-[182px] h-[40px] bg-[#00A63E] rounded-xl text-white font-semibold text-lg"><i
                             class="fa-solid fa-phone"></i> Call</button>
                 </div>
             </div>
@@ -168,7 +177,7 @@
                 </div>
                 <h1 class="text-[23px] font-bold mt-3">দুদক</h1>
                 <h2 class="text-gray-500 font-semibold">Anti-Corruption</h2>
-                <h1 class="text-[25px] font-bold mt-4">106</h1>
+                <h1 id="number6" class="text-[25px] font-bold mt-4">106</h1>
                 <div
                     class="w-[103px] min-h-[37px] bg-[#41FF6B1A] rounded-xl flex justify-center items-center text-gray-500">
                     <h1>সরকারি</h1>
@@ -177,7 +186,7 @@
                     <button id="copy-btn6"
                         class="hover:cursor-pointer hover:bg-gray-200 w-[182px] h-[40px] border-2 border-gray-300 rounded-xl text-gray-600 font-semibold text-lg"><i
                             class="fa-solid fa-copy"></i> Copy</button>
-                    <button class="w-[182px] h-[40px] bg-[#00A63E] rounded-xl text-white font-semibold text-lg"><i
+                    <button data-service="দুদক" data-number="106" class="hover:cursor-pointer hover:bg-gray-500 callBtn w-[182px] h-[40px] bg-[#00A63E] rounded-xl text-white font-semibold text-lg"><i
                             class="fa-solid fa-phone"></i> Call</button>
                 </div>
             </div>
@@ -189,7 +198,7 @@
                 </div>
                 <h1 class="text-[23px] font-bold mt-3">বিদ্যুৎ বিভ্রাট</h1>
                 <h2 class="text-gray-500 font-semibold">Electricity Outage</h2>
-                <h1 class="text-[25px] font-bold mt-4">16216</h1>
+                <h1 id="number7" class="text-[25px] font-bold mt-4">16216</h1>
                 <div
                     class="w-[103px] min-h-[37px] bg-[#41FF6B1A] rounded-xl flex justify-center items-center text-gray-500">
                     <h1>বিদ্যুৎ</h1>
@@ -198,7 +207,7 @@
                     <button id="copy-btn7"
                         class="hover:cursor-pointer hover:bg-gray-200 w-[182px] h-[40px] border-2 border-gray-300 rounded-xl text-gray-600 font-semibold text-lg"><i
                             class="fa-solid fa-copy"></i> Copy</button>
-                    <button class="w-[182px] h-[40px] bg-[#00A63E] rounded-xl text-white font-semibold text-lg"><i
+                    <button data-service="বিদ্যুৎ বিভ্রাট" data-number="16216" class="hover:cursor-pointer hover:bg-gray-500 callBtn w-[182px] h-[40px] bg-[#00A63E] rounded-xl text-white font-semibold text-lg"><i
                             class="fa-solid fa-phone"></i> Call</button>
                 </div>
             </div>
@@ -210,7 +219,7 @@
                 </div>
                 <h1 class="text-[23px] font-bold mt-3">ব্র্যাক</h1>
                 <h2 class="text-gray-500 font-semibold">Brac</h2>
-                <h1 class="text-[25px] font-bold mt-4">16445</h1>
+                <h1 id="number8" class="text-[25px] font-bold mt-4">16445</h1>
                 <div
                     class="w-[103px] min-h-[37px] bg-[#41FF6B1A] rounded-xl flex justify-center items-center text-gray-500">
                     <h1>এনজিও</h1>
@@ -219,7 +228,7 @@
                     <button id="copy-btn8"
                         class="hover:cursor-pointer hover:bg-gray-200 w-[182px] h-[40px] border-2 border-gray-300 rounded-xl text-gray-600 font-semibold text-lg"><i
                             class="fa-solid fa-copy"></i> Copy</button>
-                    <button class="w-[182px] h-[40px] bg-[#00A63E] rounded-xl text-white font-semibold text-lg"><i
+                    <button data-service="ব্র্যাক" data-number="16445" class="hover:cursor-pointer hover:bg-gray-500 callBtn w-[182px] h-[40px] bg-[#00A63E] rounded-xl text-white font-semibold text-lg"><i
                             class="fa-solid fa-phone"></i> Call</button>
                 </div>
             </div>
@@ -231,7 +240,7 @@
                 </div>
                 <h1 class="text-[23px] font-bold mt-3">বাংলাদেশ রেলওয়ে</h1>
                 <h2 class="text-gray-500 font-semibold">Bangladesh Railway</h2>
-                <h1 class="text-[25px] font-bold mt-4">163</h1>
+                <h1 id="number9" class="text-[25px] font-bold mt-4">163</h1>
                 <div
                     class="w-[103px] min-h-[37px] bg-[#41FF6B1A] rounded-xl flex justify-center items-center text-gray-500">
                     <h1>পরিবহন</h1>
@@ -240,7 +249,7 @@
                     <button id="copy-btn9"
                         class="hover:cursor-pointer hover:bg-gray-200 w-[182px] h-[40px] border-2 border-gray-300 rounded-xl text-gray-600 font-semibold text-lg"><i
                             class="fa-solid fa-copy"></i> Copy</button>
-                    <button class="w-[182px] h-[40px] bg-[#00A63E] rounded-xl text-white font-semibold text-lg"><i
+                    <button data-service="বাংলাদেশ রেলওয়ে" data-number="163" class="hover:cursor-pointer hover:bg-gray-500 callBtn w-[182px] h-[40px] bg-[#00A63E] rounded-xl text-white font-semibold text-lg"><i
                             class="fa-solid fa-phone"></i> Call</button>
                 </div>
             </div>
